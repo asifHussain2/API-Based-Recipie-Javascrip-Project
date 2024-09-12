@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+  height: 50px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: 10px;
+}
+
+.searchbar{
+  display:flex;
+  column-gap: 5px;
+}
+#searchBtn{
+  padding: 10px;
+  background-color: red;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  flex-shrink: 1;
+}
+
+#searchInput{
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  flex-shrink: 2;
+}
+
+.container {
+  width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin: 10px auto;
+      flex-wrap: wrap;
+      row-gap: 40px;
+      column-gap: 30px;
+      padding: 20px;
+}
+
+.item {
+  width: 330px;
+      border: 2px solid black;
+      height:fit-content;
+      text-align: center;
+      box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.63);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 1s;
+      position: relative;
+      background-color: black;
+      color: white;
+}
+
+.item:hover{
+transform: scale(1.02);
+
+}
+
+.item:hover .viewBtn{
+  opacity: 1;
+  bottom: 0px;
+}
+
+.item img {
+  width: 100%;
+}
+
+.viewBtn{
+  position: relative;
+  padding: 5px;
+  width:100%;
+  height: 50px;
+  bottom: -50px;
+  left: 0px;
+  font-size: 18px;
+  border: 0;
+  background-color:white;
+  color: black;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.recipieDetail{
+ width: 30%;
+ height: 60%;
+ background-color: black; 
+ position:fixed;
+ transform: translate(-50%,-50%);
+ top:50%;
+ left: 50%;
+ overflow-y: scroll;
+ border-radius: 5px;
+ display: none;
+ color: white;
+}
+
+.closeBtn{
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  column-rule: black;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.recipieDetail h2{
+  text-align: center;
+  margin: 20px;
+}
+
+.itemContainer{
+  padding: 20px;
+}
+
+.heading h2{
+  text-align: center;
+}
+
+@media screen and (max-width:500px) {
+ .heading h2{
+  font-size: 16px;
+ }
+ #searchBtn{
+  padding: 5px;
+  background-color: red;
+  border-radius: 5px;
+  border: 0;
+  font-size: 16px;
+  flex-shrink: 1;
+}
+
+#searchInput{
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  flex-shrink: 2;
+}
+
+}
